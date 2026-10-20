@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Bài Tập</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Yêu cầu 3: Liên kết bỏ qua đến nội dung chính -->
+    <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
+    <!-- Yêu cầu 4 & 7: Thanh điều hướng dùng Flexbox -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Yêu cầu 6: Phần tử cha áp dụng Grid (ít nhất 2 cột) -->
+    <main id="main-content" class="grid-container">
+        <section>
+            <h2>Nội dung chính của trang</h2>
+            <p>Chào mừng bạn đến với trang web của tôi. Dưới đây là bộ sưu tập hình ảnh:</p>
+        </section>
+
+        <!-- Khu vực chứa các hình ảnh -->
+        <div class="image-gallery">
+            <img src="Ảnh_1.jfif" alt="Hình ảnh 1">
+            <img src="Ảnh_2.jpg" alt="Hình ảnh 2">
+            <img src="Ảnh_3.jfif" alt="Hình ảnh 3">
+            <img src="Ảnh_4.jfif" alt="Hình ảnh 4">
+            <img src="Ảnh_5.jfif" alt="Hình ảnh 5">
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Yêu cầu 3: Thuộc tính position và lớp giả :focus cho liên kết "Chuyển đến Nội dung chính" */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0; /* Hiện ra khi người dùng nhấn phím Tab để focus vào liên kết */
+}
+
+/* Yêu cầu 4 & 7: Tạo kiểu điều hướng hấp dẫn, sử dụng Flexbox */
+.navbar {
+    background-color: #2c3e50;
+    padding: 15px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Dùng Flexbox */
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Yêu cầu 5: Tạo kiểu cho tất cả hình ảnh bằng mô hình hộp (Box Model: border, padding, border-radius) */
+img {
+    border: 3px solid #3498db;
+    padding: 5px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Yêu cầu 6: Áp dụng thuộc tính Grid cho phần tử cha (ít nhất 2 cột) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Chia làm 2 cột */
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Lưới con chứa ảnh gồm 2 cột */
+    gap: 15px;
+}
+
+/* Yêu cầu 8: Cập nhật phần tử bằng lớp giả di chuột (:hover) */
+img:hover {
+    transform: scale(1.05); /* Phóng to nhẹ ảnh khi rê chuột */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Yêu cầu 9: Thực hiện bộ chọn nth-child (Ví dụ: tuỳ chỉnh các ảnh lẻ/chẵn khác nhau) */
+.image-gallery img:nth-child(odd) {
+    border-radius: 50%; /* Các ảnh ở vị trí lẻ thành hình tròn */
+    border-color: #e74c3c;
+}
+
+.image-gallery img:nth-child(even) {
+    border-radius: 20px; /* Các ảnh ở vị trí chẵn có góc bo tròn lớn */
+    border-color: #2ecc71;
+}
